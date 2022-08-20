@@ -3,10 +3,7 @@ import string
 from random import randint
 
 
-#this code is for creating a password by using a list of words instead of just pulling random characters
-#so that the password is easier to remember, currently not sure how to have the program pull from the list of words,
-#then create a combination of the words from the list to match the number of characters requested in the length.
-#Will work on that in the future. The usa.txt file is included in the github if you want to try and work on it yourself.
+#currently a work in progress, but functional to some degree
 
 text_file = open('usa.txt', 'r')
 file_content = text_file.read()
