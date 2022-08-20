@@ -5,14 +5,22 @@ from random import randint
 
 #currently a work in progress, but functional to some degree
 
-text_file = open('usa.txt', 'r')
+text_file = open('textfiles\\usa.txt', 'r')
 file_content = text_file.read()
 content_list = file_content.split('\n')
 
 
 
 #user inputs length of password they would like
-length = int(input('\nPassword length: '))
+
+length = None
+
+while length == None:
+    try:
+        length = int(input('\nPassword length: '))
+    except:
+        print('sorry that isnt a number')
+
 
 #variables
 num = string.digits
