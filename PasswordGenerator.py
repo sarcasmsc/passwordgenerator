@@ -88,9 +88,27 @@ elif number_of_characters == 4:
 elif number_of_characters == 5:
     password = random.choice(fiveletterword) + temp3
 elif number_of_characters == 6:
-    password = random.choice(sixletterword) + temp3
+    passcombo = randint(1, 4)
+    if passcombo == 1:
+        password = random.choice(sixletterword) + temp3
+    if passcombo == 2:
+        password = random.choice(threeletterword) + random.choice(threeletterword) + temp3
+    if passcombo == 3:
+        password = random.choice(fourletterword) + random.choice(twoletterword) + temp3
+    if passcombo == 4:
+        password = random.choice(twoletterword) + random.choice(fourletterword) + temp3
 elif number_of_characters == 7:
-    password = random.choice(sevenletterword) + temp3
+    passcombo = randint(1, 5)
+    if passcombo == 1:
+        password = random.choice(sevenletterword) + temp3
+    if passcombo == 2:
+        password = random.choice(threeletterword) + random.choice(fourletterword) + temp3
+    if passcombo == 3:
+        password = random.choice(fourletterword) + random.choice(threeletterword) + temp3
+    if passcombo == 4:
+        password = random.choice(twoletterword) + random.choice(fiveletterword) + temp3
+    if passcombo == 5:
+        password = random.choice(fiveletterword) + random.choice(twoletterword) + temp3
 elif number_of_characters == 8:
     passcombo = randint(1, 4)
     if passcombo == 1:
