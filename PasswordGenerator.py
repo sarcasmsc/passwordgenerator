@@ -15,20 +15,8 @@ content_list = file_content.split('\n')
 length = int(input('\nPassword length: '))
 
 #variables
-lower = string.ascii_lowercase
-upper = string.ascii_uppercase
 num = string.digits
 symbols = string.punctuation
-all = lower + upper + num + symbols
-
-#randomizing the characters
-#temp = random.sample(all, length)
-
-#create the password
-#password = "".join(temp)
-
-#print the password
-#print(password)
 
 random3 = randint(1, 3)
 random2 = randint(1, 2)
