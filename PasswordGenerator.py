@@ -18,6 +18,7 @@ length = int(input('\nPassword length: '))
 num = string.digits
 symbols = string.punctuation
 
+
 random3 = randint(1, 3)
 random2 = randint(1, 2)
 number_of_numbers = random2
@@ -39,7 +40,7 @@ sevenletterword = []
 eightletterword = []
 nineletterword = []
 tenletterword = []
-elevenlettewrord = []
+elevenletterword = []
 twelveletterword = []
 thirteenletterword = []
 
@@ -65,7 +66,7 @@ for i in content_list_sorted:
     elif len(i) == 10:
         tenletterword.append(i)
     elif len(i) == 11:
-        elevenlettewrord.append(i)
+        elevenletterword.append(i)
     elif len(i) == 12:
         twelveletterword.append(i)
     elif len(i) == 13:
@@ -91,15 +92,26 @@ elif number_of_characters == 6:
 elif number_of_characters == 7:
     password = random.choice(sevenletterword) + temp3
 elif number_of_characters == 8:
-    password = random.choice(eightletterword) + temp3
+    passcombo = randint(1, 4)
+    if passcombo == 1:
+        password = random.choice(eightletterword) + temp3
+    if passcombo == 2:
+        password = random.choice(fourletterword) + random.choice(fourletterword) + temp3
+    if passcombo == 3:
+        password = random.choice(fiveletterword) + random.choice(threeletterword) + temp3
+    if passcombo == 4:
+        password = random.choice(threeletterword) + random.choice(fiveletterword) + temp3
 elif number_of_characters == 9:
-    passcombo = randint(1, 3)
+    passcombo = randint(1, 4)
     if passcombo == 1:
         password = random.choice(nineletterword) + temp3
     elif passcombo == 2:
         password = random.choice(fourletterword) + random.choice(fiveletterword) + temp3
     elif passcombo == 3:
         password = random.choice(fiveletterword) + random.choice(fourletterword) + temp3
+    elif passcombo == 4:
+        password = random.choice(threeletterword) + random.choice(threeletterword) \
+                   + random.choice(threeletterword) + temp3
 elif number_of_characters == 10:
     passcombo = randint(1, 4)
     if passcombo == 1:
@@ -113,7 +125,7 @@ elif number_of_characters == 10:
 elif number_of_characters == 11:
     passcombo = randint(1,8)
     if passcombo == 1:
-        password = random.choice(elevenlettewrord) + temp3
+        password = random.choice(elevenletterword) + temp3
     elif passcombo == 2:
         password = random.choice(sixletterword) + random.choice(fiveletterword) + temp3
     elif passcombo == 3:
@@ -182,8 +194,138 @@ elif number_of_characters == 14:
         password = random.choice(eightletterword) + random.choice(sixletterword) + temp3
     elif passcombo == 6:
         password = random.choice(sixletterword) + random.choice(eightletterword) + temp3
-    else:
+    elif passcombo == 7:
         password = random.choice(tenletterword) + random.choice(fourletterword) + temp3
+    else:
+        password = random.choice(nineletterword) + random.choice(fiveletterword) + temp3
+elif number_of_characters == 15:
+    passcombo = randint(1, 15)
+    if passcombo == 1:
+        password = random.choice(tenletterword) + random.choice(fiveletterword) + temp3
+    else:
+        password = random.choice(nineletterword) + random.choice(sixletterword) + temp3
+elif number_of_characters == 16:
+    passcombo = randint(1, 15)
+    if passcombo == 1:
+        password = random.choice(elevenletterword) + random.choice(fiveletterword) + temp3
+    else:
+        password = random.choice(tenletterword) + random.choice(sixletterword) + temp3
+elif number_of_characters == 17:
+    passcombo = randint(1, 15)
+    if passcombo == 1:
+        password = random.choice(twelveletterword) + random.choice(fiveletterword) + temp3
+    else:
+        password = random.choice(elevenletterword) + random.choice(sixletterword) + temp3
+elif number_of_characters == 18:
+    passcombo = randint(1, 15)
+    if passcombo == 1:
+        password = random.choice(twelveletterword) + random.choice(sixletterword) + temp3
+    else:
+        password = random.choice(elevenletterword) + random.choice(sevenletterword) + temp3
+elif number_of_characters == 19:
+    passcombo = randint(1, 15)
+    if passcombo == 1:
+        password = random.choice(twelveletterword) + random.choice(sevenletterword) + temp3
+    else:
+        password = random.choice(elevenletterword) + random.choice(eightletterword) + temp3
+elif number_of_characters == 20:
+    passcombo = randint(1, 15)
+    if passcombo == 1:
+        password = random.choice(twelveletterword) + random.choice(eightletterword) + temp3
+    else:
+        password = random.choice(elevenletterword) + random.choice(nineletterword) + temp3
+elif number_of_characters == 21:
+    passcombo = randint(1, 15)
+    if passcombo == 1:
+        password = random.choice(twelveletterword) + random.choice(nineletterword) + temp3
+    else:
+        password = random.choice(elevenletterword) + random.choice(tenletterword) + temp3
+elif number_of_characters == 22:
+    passcombo = randint(1, 15)
+    if passcombo == 1:
+        password = random.choice(twelveletterword) + random.choice(tenletterword) + temp3
+    else:
+        password = random.choice(elevenletterword) + random.choice(elevenletterword) + temp3
+elif number_of_characters == 23:
+    passcombo = randint(1, 15)
+    if passcombo == 1:
+        password = random.choice(tenletterword) + random.choice(fiveletterword) \
+                   + random.choice(eightletterword) + temp3
+    else:
+        password = random.choice(nineletterword) + random.choice(fiveletterword) \
+                   + random.choice(nineletterword) + temp3
+elif number_of_characters == 24:
+    passcombo = randint(1, 15)
+    if passcombo == 1:
+        password = random.choice(tenletterword) + random.choice(fiveletterword) \
+                   + random.choice(nineletterword) + temp3
+    else:
+        password = random.choice(nineletterword) + random.choice(fiveletterword) \
+                   + random.choice(tenletterword) + temp3
+elif number_of_characters == 25:
+    passcombo = randint(1, 15)
+    if passcombo == 1:
+        password = random.choice(tenletterword) + random.choice(sixletterword) \
+                   + random.choice(nineletterword) + temp3
+    else:
+        password = random.choice(nineletterword) + random.choice(tenletterword) \
+                   + random.choice(sixletterword) + temp3
+elif number_of_characters == 26:
+    passcombo = randint(1, 15)
+    if passcombo == 1:
+        password = random.choice(tenletterword) + random.choice(sevenletterword) \
+                   + random.choice(nineletterword) + temp3
+    else:
+        password = random.choice(nineletterword) + random.choice(tenletterword) \
+                   + random.choice(sevenletterword) + temp3
+elif number_of_characters == 27:
+    passcombo = randint(1, 15)
+    if passcombo == 1:
+        password = random.choice(tenletterword) + random.choice(eightletterword) \
+                   + random.choice(nineletterword) + temp3
+    else:
+        password = random.choice(nineletterword) + random.choice(tenletterword) \
+                   + random.choice(eightletterword) + temp3
+elif number_of_characters == 28:
+    passcombo = randint(1, 15)
+    if passcombo == 1:
+        password = random.choice(tenletterword) + random.choice(nineletterword) \
+                   + random.choice(nineletterword) + temp3
+    else:
+        password = random.choice(nineletterword) + random.choice(tenletterword) \
+                   + random.choice(nineletterword) + temp3
+elif number_of_characters == 29:
+    passcombo = randint(1, 15)
+    if passcombo == 1:
+        password = random.choice(tenletterword) + random.choice(nineletterword) \
+                   + random.choice(tenletterword) + temp3
+    else:
+        password = random.choice(tenletterword) + random.choice(tenletterword) \
+                   + random.choice(nineletterword) + temp3
+elif number_of_characters == 30:
+    passcombo = randint(1, 15)
+    if passcombo == 1:
+        password = random.choice(tenletterword) + random.choice(fiveletterword) \
+                   + random.choice(tenletterword) + random.choice(fiveletterword) + temp3
+    else:
+        password = random.choice(tenletterword) + random.choice(tenletterword) \
+                   + random.choice(fiveletterword) + random.choice(fiveletterword) + temp3
+elif number_of_characters == 31:
+    passcombo = randint(1, 15)
+    if passcombo == 1:
+        password = random.choice(tenletterword) + random.choice(sixletterword) \
+                   + random.choice(tenletterword) + random.choice(fiveletterword) + temp3
+    else:
+        password = random.choice(tenletterword) + random.choice(tenletterword) \
+                   + random.choice(sixletterword) + random.choice(fiveletterword) + temp3
+elif number_of_characters == 32:
+    passcombo = randint(1, 15)
+    if passcombo == 1:
+        password = random.choice(tenletterword) + random.choice(sixletterword) \
+                   + random.choice(tenletterword) + random.choice(sixletterword) + temp3
+    else:
+        password = random.choice(tenletterword) + random.choice(tenletterword) \
+                   + random.choice(sixletterword) + random.choice(sixletterword) + temp3
 else:
     password = 'sorry we currently do not support that many characters at the moment'
 
